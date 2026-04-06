@@ -74,7 +74,7 @@ The system is designed with clean API structure, basic authentication, and react
 ## How to Run Locally
 
 ### 1. Clone Repository
-- git clone <your-repo-link>
+- git clone <https://github.com/jhasaurav97/order-tracker>
 - cd order-tracker
 
 ---
