@@ -21,4 +21,21 @@ export const updateOrderStatus = (req, res) => {
         status,
         updatedAt: orders[orderId].updatedAt,
     })
-}
+};
+
+export const getOrderStatus = (req, res) => {
+    const { orderId } = req.params;
+
+    const order = orders[orderId];
+
+    // Check if order not get
+    if (!order) {
+        return res.status(404).json({ error: "Order not found" });
+    }
+
+    return res.json({
+        orderId,
+        status: order.status,
+        updatedAt: order.updatedAt,
+    });
+};
