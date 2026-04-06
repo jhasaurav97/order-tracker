@@ -20,7 +20,7 @@ const CustomerPanel = () => {
                 console.log(err.response?.data?.error);
             }
         }, 4000);
-        return clearInterval(interval);
+        return () => clearInterval(interval);
     }, [orderId]);
 
   return (
